@@ -1,5 +1,6 @@
 package com.fcsr.manager.entity;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
@@ -19,6 +20,7 @@ public class User implements Serializable{
     private static final long serialVersionUID = -6473786963724031116L;
 
     private long id;
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     private Date createTime;
     private Boolean isDeleted;
     private String name;
